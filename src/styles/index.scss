@@ -1,0 +1,354 @@
+@import "./variables.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: $dark;
+  font-family: $BeVietnam;
+  overflow-x: hidden;
+  a {
+    text-decoration: none;
+  }
+}
+
+.menu-pro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5px;
+
+  .link-pro {
+    background-color: #c1dceb94;
+    border-radius: 50%;
+    height: 22px;
+    width: 19%;
+    padding: 4rem;
+    margin: 3px;
+    color: black;
+    font-size: 30px;
+  }
+}
+
+/* ==== Desarrollo Web ==== */
+
+.portfolios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 5px;
+  .btn {
+    width: 25%;
+    height: 40px;
+    border-radius: 50%;
+    margin: 15px;
+    background-color: #c1dceb94;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  a {
+    color: #0b1c26;
+  }
+  .portfolio {
+    margin: 30px;
+  }
+}
+
+/* ==== desarrollo mobile ==== */
+.mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .boom {
+    width: 40%;
+    margin-left: 12rem;
+  }
+  .p-mobile {
+    margin: 3rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    span {
+      color: #ff6600;
+    }
+  }
+}
+
+.heading {
+  text-align: center;
+  margin: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: #0b1c26;
+  text-shadow: 0 1px #0b1c26, 0 2px #949be5;
+}
+
+/* ==== Totem ==== */
+.description {
+  text-align: center;
+  margin: 3rem;
+}
+
+.totem-img {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  img {
+    width: 38%;
+  }
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  .check {
+    flex-direction: column;
+    margin: 1rem;
+    padding: 2rem;
+    flex-wrap: nowrap;
+    .check1 .check2 .check3 .check4 {
+      width: 30%;
+    }
+  }
+}
+
+ul.totem-list {
+  list-style: none;
+  margin: 1.75rem 0;
+  padding-left: 1rem;
+  li {
+    background-color: #c1dceb94;
+    border-radius: 2.5rem 0 0.5rem;
+    margin-top: 1rem;
+    min-height: 3rem;
+    padding: 1rem;
+    position: relative;
+  }
+}
+
+/* ==== API==== */
+
+.api-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    width: 39%;
+    margin-top: 35px;
+    margin-left: 20rem;
+  }
+}
+
+/* ==== MEDIA QUERIES ==== */
+/* ==== mobile ==== */
+
+@media (max-width: 425px) {
+  .menu-pro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px;
+
+    .link-pro {
+      background-color: #c1dceb94;
+      border-radius: 50%;
+      height: 22px;
+      width: 19%;
+      padding: 4rem;
+      margin: 3px;
+      color: black;
+      font-size: 30px;
+    }
+  }
+
+  .heading {
+    text-align: center;
+    margin: 1.2rem;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+  .mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .boom {
+      width: 70%;
+      margin-left: 2rem;
+    }
+    .p-mobile {
+      margin: 3rem;
+      text-align: justify;
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 30px;
+      span {
+        color: #ff6600;
+      }
+    }
+  }
+
+  /*=== totem ===*/
+
+  .description {
+    margin: 4rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .main {
+    display: block;
+    margin: 0 auto;
+    max-width: 40rem;
+    padding: 1rem;
+  }
+
+  ul.totem-list {
+    list-style: none;
+    margin: 1.75rem 0;
+    padding-left: 1rem;
+    > li {
+      background-color: #c1dceb94;
+      border-radius: 2.5rem 0 0.5rem;
+      margin-top: 1rem;
+      min-height: 3rem;
+      padding: 1rem;
+      position: relative;
+    }
+  }
+  .totem-img {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "check list"
+      "check list"
+      "check list"
+      "check list";
+  }
+
+  .check {
+    display: grid;
+    grid-template-columns: 0.5fr;
+    margin-left: 1rem;
+    margin-top: 70px;
+    grid-template-rows: auto;
+    grid-template-areas:
+      " check1 ."
+      "check2 ."
+      " check3 ."
+      " check4 .";
+    grid-area: check;
+  }
+
+  .check1 {
+    grid-area: check1;
+  }
+
+  .check2 {
+    grid-area: check2;
+  }
+
+  .check3 {
+    grid-area: check3;
+  }
+
+  .check4 {
+    grid-area: check4;
+  }
+
+  .totem-list {
+    display: grid;
+    grid-template-areas:
+      "list1 list1 list1 ."
+      "list2 list2 list2 ."
+      "list3 list3 list3 ."
+      "list4 list4 list4 .";
+    grid-area: list;
+  }
+
+  .list1 {
+    grid-area: list1;
+  }
+
+  .list2 {
+    grid-area: list2;
+  }
+
+  .list3 {
+    grid-area: list3;
+  }
+
+  .list4 {
+    grid-area: list4;
+  }
+
+  .margin {
+    grid-area: margin;
+  }
+  .parrafo {
+    margin: 1rem;
+    text-align: start;
+  }
+
+  /* ==== API ==== */
+  .api-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: 100%;
+      margin: 2px;
+    }
+    .blog {
+      padding: 4rem;
+      margin: 2rem;
+    }
+  }
+
+  /* ==== Web ==== */
+
+  .portfolios {
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
+  }
+  .portfolio {
+    text-align: center;
+    margin: 1rem;
+    h3 {
+      text-align: center;
+      margin: 3px;
+    }
+  }
+  .btn {
+    background: #c1dceb94;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    width: 30%;
+    height: 30px;
+    margin: 10px;
+  }
+
+  .link {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 27px;
+    text-decoration-line: underline;
+    color: #0b1c26;
+  }
+}
