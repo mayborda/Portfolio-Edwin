@@ -1,3 +1,7 @@
+# Portfolio 
+Este proyecto fue hecho para Edwin Piston, lo realice gracias a CoderHouse y su top 10 en el curso de React js.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
