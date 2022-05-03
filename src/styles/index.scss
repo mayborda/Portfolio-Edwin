@@ -1,0 +1,68 @@
+//compañera may
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@600;700;800&display=swap");
+@import "./variables.scss";
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  color: $dark;
+  font-family: $BeVietnam;
+  overflow-x: hidden;
+  a {
+    text-decoration: none;
+  }
+}
+
+/* ==== MEDIA QUERIES ==== */
+/* ==== mobile ==== */
+
+@media (max-width: 620px) {
+  .menu-pro {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 425px) {
+  /*=== totem ===*/
+
+  .main {
+    display: block;
+    margin: 0 auto;
+    max-width: 40rem;
+    padding: 1.6rem;
+  }
+
+  .main {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "check list"
+      "check list"
+      "check list"
+      "check list";
+  }
+
+  .margin {
+    grid-area: margin;
+  }
+  .parrafo {
+    margin: 1.6rem;
+    text-align: start;
+  }
+
+  /* ==== Web ==== */
+
+  .link {
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 27px;
+    text-decoration-line: underline;
+    color: #0b1c26;
+  }
+}
